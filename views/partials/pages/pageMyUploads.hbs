@@ -1,0 +1,46 @@
+{{> tabNoActive }}
+<div class="tab-container">
+  <div class="container">
+    {{#if doc}}
+    <div class="row">
+      <div class="col-md-6">
+        <canvas id="viewsChart"></canvas>
+      </div>
+      <div class="col-md-6">
+        <canvas id="studentChart"></canvas>
+      </div>
+    </div>
+    {{/if}}
+    <div class="uploads-container">
+      <h5>My uploads</h5>
+      {{#each doc }}
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-block">
+                <div class="container">
+                  <div class="row">
+                    <div class="col col-md-12">
+                      <img class="episode-image" src="public/uploads/{{this._id}}/image.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col col-md-12">
+                      <h6 class="card-title course-title">{{ this.details.[0].post_title }}</h6>
+                      <p class="card-text">
+                        {{this.details.[0].post_description}}
+                      </p>
+                      <a href="/myuploads/{{ this._id }}" class="btn btn-primary">Edit Course</a>
+                      <a href="/course/{{ this._id }}" class="btn btn-primary">Preview Course</a>
+                      <a href="#" class="btn btn-primary">Delete Course</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

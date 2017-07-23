@@ -1,0 +1,25 @@
+{{> genericHeader }}
+<body class="profile-page">
+    {{#unless session.user }}
+      {{> navUnregistered }}
+    {{/unless}}
+    {{#if session.user }}
+      {{> navRegistered }}
+    {{/if}}
+    <div class="wrapper">
+        {{#unless session.user }}
+          {{> homeHero }}
+        {{/unless}}
+        <div class="section">
+          {{#if session.user }}
+            {{> pageBrowseCourses }}
+          {{/if}}
+          {{#unless session.user }}
+            {{> homeUnregistered }}
+          {{/unless}}
+        </div>
+        {{> genericFooter }}
+    </div>
+</body>
+{{> scripts }}
+</html>

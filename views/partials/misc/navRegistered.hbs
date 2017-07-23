@@ -1,0 +1,45 @@
+<nav class="navbar navbar-toggleable-md bg-primary fixed-top nav-no-shadow">
+    <div class="container">
+        <div class="navbar-translate">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img class="auth-logo" src="/public/img/logo_nav_light.png" alt="">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="img/blurred-image-1.jpg">
+            <ul class="navbar-nav">
+                <li class="nav-item registered-nav-item">
+                  <a href="/upload" class="btn btn-primary btn-simple nav-simple-btn">
+                    <i class="now-ui-icons ui-1_simple-add nav-dropdown-icon"></i>
+                    Upload Course
+                  </a>
+                </li>
+                <li class="nav-item registered-nav-item">
+                  <button class="btn btn-primary btn-simple nav-simple-btn">
+                    <i class="now-ui-icons ui-1_bell-53 nav-dropdown-icon"></i>
+                    Notification
+                  </button>
+                </li>
+                <li class="nav-item registered-nav-item">
+                  <div class="dropdown">
+                    <a href="#pablo" class="btn btn-warning" data-toggle="dropdown" id="navbarDropdownMenuLink1">
+                      <i class="now-ui-icons arrows-1_minimal-down nav-dropdown-icon"></i>
+                      My Account
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                        <a class="dropdown-item">{{session.user.name}}</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/myuploads"><i class="nav-dropdown-icon ion-paper-airplane" ></i> My uploads</a>
+                        <a class="dropdown-item" href="#"><i class="nav-dropdown-icon ion-edit" ></i> Edit my profile</a>
+                        <a class="dropdown-item" href="/logout"><i class="nav-dropdown-icon ion-android-exit"></i> Logout</a>
+                    </ul>
+                  </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

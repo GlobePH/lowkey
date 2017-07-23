@@ -1,0 +1,30 @@
+{{> tabBrowseCourses }}
+<div class="tab-container">
+  <div class="container">
+    <div class="top-courses">
+      <div class="course-category">
+        <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <h3>Recenty added courses</h3>
+                </div>
+              </div>
+              <div class="row flex-row flex-nowrap courses">
+                {{#if doc }}
+                  {{#each doc }}
+                  <div class="col-3">
+                      <div class="card card-block">
+                        <img src="/public/uploads/{{this._id}}/image.jpg" alt="Card image cap">
+                        <h6 style="margin-top: 20px;"><a href="/course/{{this._id}}">{{this.details.[0].post_title}}</a></h6>
+                        <p class="card-text">{{shorten this.details.[0].post_description}}</p>
+                        <a href="/course/{{this._id}}" class="btn btn-primary btn-block">Take course</a>
+                      </div>
+                  </div>
+                  {{/each}}
+                {{/if}}
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

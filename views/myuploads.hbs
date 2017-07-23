@@ -1,0 +1,17 @@
+{{> genericHeader }}
+<body class="profile-page">
+    {{#if session.user }}
+      {{> navRegistered }}
+    {{/if}}
+    <div class="wrapper">
+        <div class="section">
+          {{#if session.user }}
+            {{> pageMyUploads }}
+          {{/if}}
+        </div>
+        {{> genericFooter }}
+    </div>
+    <script type="text/javascript" src="/public/js/uploadstats.js"></script>
+</body>
+{{> scripts }}
+</html>

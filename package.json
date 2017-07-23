@@ -1,0 +1,34 @@
+{
+  "name": "hackerhive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev-watch": "nodemon -e js,hbs,css,html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "bootstrap": "^4.0.0-alpha.6",
+    "cookie-parser": "^1.4.3",
+    "create-torrent": "^3.29.2",
+    "ejs": "^2.5.6",
+    "ejs-mate": "^2.3.0",
+    "express": "^4.15.3",
+    "express-fileupload": "^0.1.4",
+    "express-flash": "0.0.2",
+    "express-session": "^1.15.3",
+    "hbs": "^4.0.1",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.11.3",
+    "tether": "^1.4.0",
+    "validator": "^8.0.0",
+    "webtorrent": "^0.98.19",
+    "webtorrent-hybrid": "^1.0.6"
+  }
+}

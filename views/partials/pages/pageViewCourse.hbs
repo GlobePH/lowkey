@@ -1,0 +1,64 @@
+{{> tabNoActive }}
+<div class="tab-container">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-block">
+            <h5 class="card-title">{{ this.doc.details.[0].post_title }}</h5>
+            <div class="course-image-holder">
+              <img class="course_image" src="/public/uploads/{{params.id}}/image.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card course-about-card">
+          <div class="card-block">
+            <a href="/start/{{ this.doc._id }}" class="btn btn-primary btn-block take-btn">Take this course</a>
+            <h6 class="card-title">About this course</h6>
+            <div class="card-description course-card-description">
+              <p>{{ this.doc.details.[0].post_description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-block">
+              <h5 class="card-title">Course curriculumn</h5>
+              {{#if epiDoc }}
+                <div class="episode_list">
+                  {{#each epiDoc}}
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-block">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img class="episode-image" src="/public/uploads/{{this._id}}/image.jpg" alt="">
+                              </div>
+                              <div class="col-md-9">
+                                <h6><a href="/watch/{{this._id}}">{{ this.episode_title }}</a></h6>
+                                <p>{{ this.episode_description }}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {{/each}}
+                </div>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

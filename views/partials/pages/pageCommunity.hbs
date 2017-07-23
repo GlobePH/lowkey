@@ -1,0 +1,40 @@
+{{> tabCommunity }}
+<div class="tab-container">
+  <div class="container">
+    <div class="row">
+      <div class="col col-md-4">
+        <div class="card">
+          <div class="card-block">
+            <a href="/community/create" class="btn btn-primary btn-block">New Thread</a>
+            <h6 style="margin: 30px 0; ">Choose a filter</h6>
+            <hr>
+            <a href="#">
+              <i class="now-ui-icons business_globe" style="margin-right: 10px;"></i>
+              All threads
+            </a>
+            <hr>
+            <a href="#">
+              <i class="now-ui-icons design_vector" style="margin-right: 10px;"></i>
+              Group projects
+            </a>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-8">
+        <div class="card">
+          <div class="card-block">
+            {{#each doc }}
+            <div class="card">
+              <div class="card-block">
+                <h6><a href="#">{{this.thread_title}}</a></h6>
+                <p>{{this.thread_content}}</p>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

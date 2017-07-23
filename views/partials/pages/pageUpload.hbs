@@ -1,0 +1,31 @@
+{{> tabNoActive }}
+<div class="tab-container">
+  <div class="container">
+    <div class="card">
+      <div class="card-block">
+        <h5>Create course</h5>
+        <div class="row">
+          <div class="col-md-12">
+            <form method="post" encType="multipart/form-data">
+              <div class="form-group">
+                <label for="post_title">Course Title</label>
+                <input type="text" id="post_title" class="form-control" name="post_title" placeholder="example: Introduction to javascript">
+              </div>
+              <div class="form-group">
+                <label for="post_description">Course Desccription</label>
+                <textarea id="post_description" name="post_description" class="form-control" placeholder="Here can be your nice text" rows="10"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="course_cover">Upload course photo</label>
+                <input type="file" class="form-control-file" name="course_cover" id="course_cover" aria-describedby="fileHelp">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-round btn-primary">Upload course</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

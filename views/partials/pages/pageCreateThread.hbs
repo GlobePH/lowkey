@@ -1,0 +1,33 @@
+{{> tabCommunity }}
+<div class="tab-container">
+  <div class="container">
+    <div class="row">
+      <div class="col col-md-12">
+        <div class="card">
+          <div class="card-block">
+            <form method="post">
+              <div class="form-group">
+                <label for="thread_title">Thread Title</label>
+                <input type="text" id="thread_title" class="form-control" name="thread_title" placeholder="Title for your thread">
+              </div>
+              <div class="form-group">
+                <label for="thread_content">Content</label>
+                <textarea id="thread_content" name="thread_content" class="form-control" rows="10"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="thread_category">Category</label>
+                <select class="form-control" name="thread_category">
+                  <option value="general">general</option>
+                  <option value="project">projects</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-round btn-primary">Submit thread</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

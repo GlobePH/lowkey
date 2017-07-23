@@ -1,0 +1,16 @@
+{{> genericHeader }}
+<body class="profile-page">
+    {{#if session.user }}
+      {{> navRegistered }}
+    {{/if}}
+    <div class="wrapper">
+        <div class="section">
+          {{#if session.user }}
+            {{> pageCommunity }}
+          {{/if}}
+        </div>
+        {{> genericFooter }}
+    </div>
+</body>
+{{> scripts }}
+</html>

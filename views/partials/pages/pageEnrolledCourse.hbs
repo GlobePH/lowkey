@@ -1,0 +1,40 @@
+{{> tabNoActive }}
+<div class="tab-container">
+  <div class="container">
+    
+    <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-block">
+              <h5 class="card-title">Course curriculumn</h5>
+              {{#if epiDoc }}
+                <div class="episode_list">
+                  {{#each epiDoc}}
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-block">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img class="episode-image" src="/public/uploads/{{this._id}}/image.jpg" alt="">
+                              </div>
+                              <div class="col-md-9">
+                                <h6><a href="/watch/{{this._id}}">{{ this.episode_title }}</a></h6>
+                                <p>{{ this.episode_description }}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {{/each}}
+                </div>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

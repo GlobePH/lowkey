@@ -1,0 +1,14 @@
+{{> viewCourseHeader }}
+<body class="profile-page">
+    {{#if session.user }}
+      {{> navRegistered }}
+    {{/if}}
+    <div class="wrapper">
+        <div class="section">
+            {{> pageWatchVideo }}
+        </div>
+        {{> genericFooter }}
+    </div>
+    {{> watchVideoScript }}
+</body>
+</html>
